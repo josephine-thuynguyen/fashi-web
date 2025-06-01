@@ -14,7 +14,6 @@ body
 h1
 { 
 		font-size: 45px;
-		background: #000;
 }
 h2{ font-size: 40px; text-shadow: 1px 1px 5px rgba(255,255,0,0.8)}
 h3{ font-size: 36px}
