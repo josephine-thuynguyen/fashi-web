@@ -1,11 +1,8 @@
 @charset "utf-8";
-/* CSS Document */
 @import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Quicksand:wght@300..700&display=swap');
-@import url("../fonts/stylesheet.css");
-
 @import url("all.css");
 
-body /* định dạng cho nguyên 1 trang*/
+body
 {
 	background-color: #fff; 
 	color: #333;
@@ -19,7 +16,7 @@ h1
 		font-size: 45px;
 		background: #000;
 }
-h2{ font-size: 40px; text-shadow:1px 1px 5px rgba(255,255,0,0.8)}
+h2{ font-size: 40px; text-shadow: 1px 1px 5px rgba(255,255,0,0.8)}
 h3{ font-size: 36px}
 h4{ font-size: 24px}
 h5{ font-size: 20px}
@@ -77,7 +74,6 @@ a:hover
 [class*="col-"]
 {
 	padding: 15px;
-	border: 1px solid blue
 }
 *{ box-sizing: border-box}
 .img-100{width: 100%}
@@ -88,73 +84,89 @@ a:hover
 }
 .card
 { 
-	background-color: #E6E6E6;
-	border-radius: 5px;
-	overflow: hidden;
+	background: white;
+	border-radius: 15px; /* bo goc*/
+	overflow: hidden
 	}
 .card-body
 { 
-	padding: 16px;
+	padding: 16px
 }
 
 footer
 {
-	background: #ccc;
+	background: black;
+	
 }
-.text-primary { color: #92B9AD}
-.text-secondary { color:#5FA7BB}
-.text-warning { color: #FFAB00}
-.text-light { color: #DDDDDD}
-.text-dark { color: #323232}
-.text-giacu 
-{
+/*---- style he thong mau chữ cho web---*/
+.text-primary { color:#A2A2A2} /* mau chử chính (lam nhan ý chính */
+.text-secondary { color:#5FA7BB} /* mau chử phụ (lam nhan ý phụ trong thiet ke */
+.text-warming{color:#FF4C09 }
+.text-light{ color:#B4D0DE}
+.text-dark{color: #323232}
+.text-giacu {
 	color: #B9B9B9;
-	text-decoration: line-through;
+	text-decoration: line-through
 }
-.bg-primary { background-color: #92B9AD}
-.bg-secondary { background-color:#5FA7BB}
-.bg-hongcam { background-color: #F4A9AC}
-.bg-light { background-color:#DDDDDD}
-.bg-dark { background-color:#323232}
+.text-footer{color: white}
+/*---- style he thong mau nền background cho web---*/
+.bg-primary { background-color:#92B9AD}
+.bg-secondary { background-color:#5FA7BB }
+.bg-hongcam{ background-color:#F4A9AC }
+.bg-light{background-color:#B4D0DE}
+.bg-dark {background-color:#323232}
+/*--- style he thong mau cho nút button---*/
+.bg-hong { background-color:#F6B0B2}
+.btn-doimau{
+background-color: black;
+color: white;
+}
+.btn-doimau:hover{
+background-color: #313131;
+color: white;
+}
 .btn-primary
 { 
 	background-color: black;
 	color: white;
-	padding: 8px 16px;
+	padding: 8px 12px;
 	border-radius: 4px;
+	margin-top: 10px
 }
-.btn-primary:hover
-{
-	background-color:#666;
+.btn-primary:hover{
+	background-color:#5FA7BB;
 	color: white;
+	
 }
 
 .btn-secondary
 { 
-	background-color: #05916F;
+	background-color: #5FA7BB;
 	color: white;
 	padding: 8px 16px;
 	border-radius: 4px
 }
-.btn-secondary:hover
-{
+.btn-secondary:hover{
 	background-color:deeppink;
-	color: white;
+	color: white
 }
 
 .btn-outline-primary
 {
-	border: 1px deeppink inset;
-	color: deeppink;
+	border: 0px deeppink inset;
+	color: #1B1B1B;
 	padding: 8px 16px;
 	border-radius: 4px;
 	margin:2px ;
+	background-color: aliceblue;
 	
 }
 .btn-outline-primary:hover
 {
-	background-color:deeppink;
-	color: white
+	background-color: black;
+	color: black;
+	font-weight: 600;
+	
 }
 .btn-outline-secondary
 {
@@ -170,6 +182,7 @@ footer
 	background-color:#05916F;
 	color: white
 }
+/*--- style cho menu can ban chi dung duoc tai pc---*/
 ul.menu
 {
 	display: flex;
@@ -182,8 +195,7 @@ ul.menu li a
 	padding: 8px 16px;	/*background-color: deeppink;*/
 	color: #333;
 	margin: 2px;
-	color: #666666; letter-spacing: 0.08rem;
-	display: block
+		display: block
 }
 ul.menu li a:hover
 {
@@ -227,94 +239,195 @@ ul.menu .dropdown-menu a
 	position: relative
 }
 .banner-caption { 
-	padding: 20px; 
+	 padding: 20px; 
 	width: 40%;
 	/*border: 2px solid blue;*/
 	position: absolute;
 	right: 10%; top: 20%
 }
-#hero
-.text-center { text-align: center}
-.text-right { text-align: right}
-.text-justify { text-align: justify}
-.border-bottom { border-bottom: 1px solid}
-.justify-between { justify-content: space-between}
-.justify-end { justify-content: flex-end}
-.justify-start { justify-content: flex-start}
-.navbar {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.navbar .logo { font-size: 2rem}
-.navbar ul {
-	display: flex;
+#hero{}
+.text-center{text-align: center}
+.text-right{ text-align: right}
+.text-justify{ text-align: justify}
+.border-bottom{border-bottom: 1px solid #666}
+/*-- các cột nếu cần flex thì goi d-flex*/
+.d-flex{ display: flex}
+/* canh đẩy chiều dọc cho các box trong flex*/
+.align-item-center{align-items: center}
+.align-item-end{ align-items: flex-end}
+/* canh đẩy chiều ngang cho các box trong flex*/
+.justify-center{justify-content: center}
+.justify-between{ justify-content: space-between}
+.justify-end{justify-content: flex-end}
+.justify-start{justify-content: flex-start}
+.navbar
+{ display: flex;
+justify-content: space-between;
+align-items:center}
+.navbar .logo{ font-size: 2rem}
+
+.navbar ul
+{
+	display: flex; 
 	list-style: none;
 	margin: 0;
-	padding: 0;
+	padding:0
 }
 .navbar ul li { position: relative}
-.navbar ul li a {
+.navbar ul li a
+{
+	padding: 10px 20px;
+	font-weight: 500;
+}
+.navbar ul li a:hover{
+	border-bottom: 2px solid black;
 	
 }
 /*-- style hệ thống spacing khoảng cách*/
 .my-100
-{ 
-margin-top: 100px;
-margin-bottom: 100px
+{
+	margin-top: 100px;
+	margin-bottom: 100px
 }
 .my-50
-{ 
-margin-top: 50px;
-margin-bottom: 50px
+{
+	margin-top: 50px;
+	margin-bottom: 50px
 }
-.p-0{ padding: 0}
-.p-10{ padding: 10px}
-.mx-auto{ margin-left: auto; margin-right: auto}
+.mx-auto{margin-left: auto; margin-right: auto}
 .ml-auto{ margin-left: auto}
 .mr-auto{ margin-right: auto}
-.py-100
+.p-0{padding: 0}
+.p-5{ padding: 5px }
+.p-10{ padding: 10px}
+.py-100 
 {
-	paddinh-top: 100px;
-	padding-bottom: 100px;
+	padding-top: 100px;
+	padding-bottom: 100px
 }
-#danh-muc .anh-dm
-{position: relative; overflow: hidden}
-#danh-muc .caption
+#danhmuc .col-4{ position: relative}
+#danhmuc .anh-dm
+{ position: relative;
+overflow: hidden
+}
+#danhmuc .caption
 {
 	position: absolute;
 	left: 0;
 	top: 45%;
 	width: 100%;
-	display: flex; justify-content: center;
+	text-align: center;
+	display: flex; justify-content: center
 }
-#danh-muc .caption p
-{background: white; padding: 10px 25px;}
-#danh-muc img {transition: all 1s}
-#danh-muc .anh-dm:hover>img {transform: scale(1.2)}
+#danhmuc .caption p
+{background: white; padding: 10px}
+#danhmuc img {transition:all 1s }
+#danhmuc .anh-dm:hover >img 
+{transform: scale(1.2)}
 
-#new-collection .card
-{position: absolute; overflow: hidden;}
 
-#new-collection .left-box
+
+
+#New-Collection .card
+{position: relative; overflow: hidden
+}
+#New-Collection .left-box
 {
-	position: absolute; left: 10px; top: 10px;
-	background: #000; color: #fff;
+	position: absolute;left: 10px;top: 10px;
+	background: #000;color: #fff;
 	padding: 5px 15px;
-	font-size: 14px;
+	font-size: 14px
 }
-#new-collection .right-box
-{
-	position: absolute; right: 10px; top: 10px;
-	border: 1px solid #d00;
-	transition: all 0.5s;
+#New-Collection .right-box
+{position: absolute;
+	right: -100px;top: 10px;
+	transition: all 0.5s
 }
-#new-collection .card:hover> .right-box {right: 10px}
-#new-collection .right-box a
+#New-Collection .card:hover >.right-box{right: 10px}
+#New-Collection .right-box a
 {
 	display: block;
 	border: 1px solid #333;
 	border-radius: 50%;
 	padding: 10px;
-	margin: 5px;
+	margin: 5px
+}
+.d-none{display: none}
+#cam-nhan .content{
+	margin-top: 100px; position: relative;
+	padding-top: 50px; text-align: center
+	}
+#cam-nhan .avatar {
+	position: absolute;
+	border-radius: 50%;
+	left: 40%; top: -30%;
+	padding: 5px; background: white;
+	box-shadow: 0 0 5px rgba(0,0,0,0,4)
+	
+}
+#Best-Seller .card
+{position: relative; overflow: hidden
+}
+#Best-Seller .left-box
+{
+	position: absolute;left: 10px;top: 10px;
+	background: #000;color: #fff;
+	padding: 5px 15px;
+	font-size: 14px
+}
+#Best-Seller .right-box
+{position: absolute;
+	right: -100px;top: 10px;
+	transition: all 0.5s
+}
+#Best-Seller .card:hover >.right-box{right: 10px}
+#Best-Seller .right-box a
+{
+	display: block;
+	border: 1px solid #333;
+	border-radius: 50%;
+	padding: 10px;
+	margin: 5px
+}
+.d-none{display: none}
+#News .col-4{ position: relative}
+#News .anh-dm
+{ position: relative;
+	border-radius: 15px;
+overflow: hidden
+}
+#News .caption
+{
+	position: absolute;
+	left: 0;
+	top: 45%;
+	width: 100%;
+	text-align: center;
+	display: flex; justify-content: center
+}
+#News .caption p
+{background: white; padding: 10px}
+#News img {transition:all 1s;
+}
+#News .anh-dm:hover >img 
+{transform: scale(1.1)}
+.mc4wp-form-fields .newsletter-wrapper {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    vertical-align: top;
+}
+.mc4wp-form-fields .newsletter-wrapper input[type=email] {
+  height: 50px;
+  width: 480px;
+  border: 0;
+  border-radius: 5px 0 0 5px;
+  padding: 15px;
+}
+.mc4wp-form-fields .newsletter-wrapper input[type=submit] {
+  height: 50px;
+  vertical-align: top;
+  padding: 5px 27px;
+  border-radius: 0 5px 5px 0;
 }
